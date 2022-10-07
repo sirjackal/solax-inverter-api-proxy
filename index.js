@@ -6,7 +6,7 @@ const INT16_MAX = 0x7FFF;
 const serverPath = '/solax-api';
 
 const checkConfig = () => {
-	if (!process.env.URL || !process.env.PASSWORD) {
+	if (!process.env.SOLAX_URL || !process.env.SOLAX_PASSWORD) {
 		throw new Error('Params URL and PASSWORD are not set in .env config file.');
 	}
 }
@@ -17,7 +17,7 @@ const fetchSolaxData = async () => {
 
 	const urlencoded = new URLSearchParams();
 	urlencoded.append('optType', 'ReadRealTimeData');
-	urlencoded.append('pwd', process.env.PASSWORD);
+	urlencoded.append('pwd', process.env.SOLAX_PASSWORD);
 
 	const requestOptions = {
 		method: 'POST',
@@ -26,7 +26,7 @@ const fetchSolaxData = async () => {
 		redirect: 'follow',
 	};
 
-	return (await fetch(process.env.URL, requestOptions)).json();
+	return (await fetch(process.env.SOLAX_URL, requestOptions)).json();
 };
 
 const u16Packer = (values) => {
@@ -117,4 +117,4 @@ const requestListener = (req, res) => {
 
 checkConfig();
 const server = http.createServer(requestListener);
-server.listen(8080);
+server.listen(process.env.SERVER_PORT || 8080);
