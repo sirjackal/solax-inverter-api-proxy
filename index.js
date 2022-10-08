@@ -51,6 +51,7 @@ const toSigned = (value) => {
 const mapSolaxResponse = (rawData) => {
 	const dataArr = rawData.Data;
 
+	// mapping taken from https://github.com/squishykid/solax/blob/master/solax/inverters/qvolt_hyb_g3_3p.py
 	return {
 		pvPower: dataArr[14] + dataArr[15],
 		acPower: toSigned(dataArr[9]),
@@ -63,7 +64,7 @@ const mapSolaxResponse = (rawData) => {
 		batterySoc: dataArr[103],
 		gridPower: toSigned(dataArr[34]),
 		batteryVoltage: dataArr[39] / 100,
-		batteryCurrent: dataArr[40] / 100,
+		batteryCurrent: toSigned(dataArr[40]) / 100,
 		batteryPower: toSigned(dataArr[41]),
 		batteryRemainingEnergy: dataArr[106] / 10,
 		loadPower: toSigned(dataArr[47]),
@@ -80,9 +81,9 @@ const mapSolaxResponse = (rawData) => {
 		totalPvEnergy: u16Packer([dataArr[80], dataArr[81]]) / 10,
 		todayEnergy: dataArr[82] / 10,
 		todayEnergyInclBatteryUsage: dataArr[70] / 10,
-		outputCurrentPhase1: dataArr[3] / 10,
-		outputCurrentPhase2: dataArr[4] / 10,
-		outputCurrentPhase3: dataArr[5] / 10,
+		outputCurrentPhase1: toSigned(dataArr[3]) / 10,
+		outputCurrentPhase2: toSigned(dataArr[4]) / 10,
+		outputCurrentPhase3: toSigned(dataArr[5]) / 10,
 		powerPhase1: toSigned(dataArr[6]),
 		powerPhase2: toSigned(dataArr[7]),
 		powerPhase3: toSigned(dataArr[8]),
