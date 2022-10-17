@@ -12,5 +12,9 @@ Thing http:url:solax "Solax inverter" [	baseURL="http://localhost:8085/solax-api
 		Type number : todayFeedInEnergy "Today Feed-in Energy" [ stateTransformation="JSONPATH:$.todayFeedInEnergy" ]
 		Type number : totalFeedInEnergy "Todal Feed-in Energy" [ stateTransformation="JSONPATH:$.totalFeedInEnergy" ]
 		Type number : acPower "AC Power" [ stateTransformation="JSONPATH:$.acPower" ]
+		Type number : todayBatteryChargeEnergy "Today Battery Charge Energy" [ stateTransformation="JSONPATH:$.todayBatteryChargeEnergy" ]
+		Type number : totalBatteryChargeEnergy "Total Battery Charge Energy" [ stateTransformation="JSONPATH:$.totalBatteryChargeEnergy" ]
+		Type number : todayBatteryDischargeEnergy "Today Battery Discharge Energy" [ stateTransformation="JSONPATH:$.todayBatteryDischargeEnergy" ]
+		Type number : totalBatteryDischargeEnergy "Total Battery Discharge Energy" [ stateTransformation="JSONPATH:$.totalBatteryDischargeEnergy" ]
 }
 

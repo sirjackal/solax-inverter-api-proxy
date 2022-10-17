@@ -12,3 +12,7 @@ Number solaxTotalConsumption "Spotřeba celkem [%.1f kWh]" (gSolaxInverter) { ch
 Number solaxTodayFeedInEnergy "Dnešní přetoky [%.1f kWh]" (gSolaxInverter) { channel="http:url:solax:todayFeedInEnergy" }
 Number solaxTotalFeedInEnergy "Přetoky celkem [%.1f kWh]" (gSolaxInverter) { channel="http:url:solax:totalFeedInEnergy" }
 Number solaxAcPower "Energie v měniči [%d W]" (gSolaxInverter) { channel="http:url:solax:acPower" }
+Number solaxTodayBatteryChargeEnergy "Dnes posláno do baterií [%.1f kWh]" <returnpipe> (gSolaxInverter) { channel="http:url:solax:todayBatteryChargeEnergy" }
+Number solaxTotalBatteryChargeEnergy "Celkem posláno do baterií [%.1f kWh]" <returnpipe> (gSolaxInverter) { channel="http:url:solax:totalBatteryChargeEnergy" }
+Number solaxTodayBatteryDischargeEnergy "Dnes čerpáno z baterií [%.1f kWh]" <flowpipe> (gSolaxInverter) { channel="http:url:solax:todayBatteryDischargeEnergy" }
+Number solaxTotalBatteryDischargeEnergy "Celkem čerpáno z baterií [%.1f kWh]" <flowpipe> (gSolaxInverter) { channel="http:url:solax:totalBatteryDischargeEnergy" }

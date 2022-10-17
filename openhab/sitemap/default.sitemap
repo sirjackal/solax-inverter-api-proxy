@@ -2,15 +2,26 @@ sitemap solax label="Solax" {
     Frame label="FVE" {
     	Text item=solaxPvPower
         Text item=solaxLoadPower
+
     	Text item=solaxGridPower valuecolor=[solaxGridPower<0="red"]
     	Text item=solaxBatterySoc
-    	Text item=solaxBatteryPower valuecolor=[solaxBatteryPower<0="red"]
-    	Text item=solaxTodayYield
-    	Text item=solaxTodayConsumption
-    	Text item=solaxTotalYield
+
+		Text item=solaxTodayYield
+		Text item=solaxTotalYield
+
+		Text item=solaxTodayConsumption
     	Text item=solaxTotalConsumption
+
+    	Text item=solaxBatteryPower valuecolor=[solaxBatteryPower<0="red"]
+		Text item=solaxAcPower
+
     	Text item=solaxTodayFeedInEnergy
     	Text item=solaxTotalFeedInEnergy
-    	Text item=solaxAcPower
+
+		Text item=solaxTodayBatteryChargeEnergy
+		Text item=solaxTotalBatteryChargeEnergy
+
+		Text item=solaxTodayBatteryDischargeEnergy
+		Text item=solaxTotalBatteryDischargeEnergy
     }
 }
