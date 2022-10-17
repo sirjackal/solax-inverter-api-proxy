@@ -5,9 +5,9 @@ Number solaxLoadPower "Aktuální spotřeba [%d W]" <poweroutlet> (gSolaxInverte
 Number solaxGridPower "Aktuální dodávka do sítě [%d W]" <energy> (gSolaxInverter) { channel="http:url:solax:gridPower" }
 Number solaxBatterySoc "Kapacita baterií [%d %%]" <batteryLevel> (gSolaxInverter) { channel="http:url:solax:batterySoc" }
 Number solaxBatteryPower "Nabíjení baterie [%d W]" (gSolaxInverter) { channel="http:url:solax:batteryPower" }
-Number solaxTodayEnergy "Dnešní výroba [%.1f kWh]" (gSolaxInverter) { channel="http:url:solax:todayEnergy" }
+Number solaxTodayYield "Dnešní výroba [%.1f kWh]" (gSolaxInverter) { channel="http:url:solax:todayYield" }
 Number solaxTodayConsumption "Dnešní spotřeba [%.1f kWh]" (gSolaxInverter) { channel="http:url:solax:todayConsumption" }
-Number solaxTotalEnergy "Výroba celkem [%.1f kWh]" (gSolaxInverter) { channel="http:url:solax:totalEnergy" }
+Number solaxTotalYield "Výroba celkem [%.1f kWh]" (gSolaxInverter) { channel="http:url:solax:totalYield" }
 Number solaxTotalConsumption "Spotřeba celkem [%.1f kWh]" (gSolaxInverter) { channel="http:url:solax:totalConsumption" }
 Number solaxTodayFeedInEnergy "Dnešní přetoky [%.1f kWh]" (gSolaxInverter) { channel="http:url:solax:todayFeedInEnergy" }
 Number solaxTotalFeedInEnergy "Přetoky celkem [%.1f kWh]" (gSolaxInverter) { channel="http:url:solax:totalFeedInEnergy" }
