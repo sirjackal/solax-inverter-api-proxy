@@ -23,5 +23,7 @@ sitemap solax label="Solax" {
 
 		Text item=solaxTodayBatteryDischargeEnergy
 		Text item=solaxTotalBatteryDischargeEnergy
+
+		Text item=solaxInverterTemperature
     }
 }

@@ -16,3 +16,4 @@ Number solaxTodayBatteryChargeEnergy "Dnes posláno do baterií [%.1f kWh]" <ret
 Number solaxTotalBatteryChargeEnergy "Celkem posláno do baterií [%.1f kWh]" <returnpipe> (gSolaxInverter) { channel="http:url:solax:totalBatteryChargeEnergy" }
 Number solaxTodayBatteryDischargeEnergy "Dnes čerpáno z baterií [%.1f kWh]" <flowpipe> (gSolaxInverter) { channel="http:url:solax:todayBatteryDischargeEnergy" }
 Number solaxTotalBatteryDischargeEnergy "Celkem čerpáno z baterií [%.1f kWh]" <flowpipe> (gSolaxInverter) { channel="http:url:solax:totalBatteryDischargeEnergy" }
+Number solaxInverterTemperature "Teplota střídače [%d °C]" <temperature> (gSolaxInverter) { channel="http:url:solax:inverterTemperature" }

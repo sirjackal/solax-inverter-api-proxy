@@ -16,5 +16,6 @@ Thing http:url:solax "Solax inverter" [	baseURL="http://localhost:8085/solax-api
 		Type number : totalBatteryChargeEnergy "Total Battery Charge Energy" [ stateTransformation="JSONPATH:$.totalBatteryChargeEnergy" ]
 		Type number : todayBatteryDischargeEnergy "Today Battery Discharge Energy" [ stateTransformation="JSONPATH:$.todayBatteryDischargeEnergy" ]
 		Type number : totalBatteryDischargeEnergy "Total Battery Discharge Energy" [ stateTransformation="JSONPATH:$.totalBatteryDischargeEnergy" ]
+		Type number : inverterTemperature "Inverter Temperature" [ stateTransformation="JSONPATH:$.inverterTemperature" ]
 }
 
