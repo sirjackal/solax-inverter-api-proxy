@@ -87,6 +87,7 @@ const mapSolaxResponse = (rawData) => {
 		powerPhase1: toSigned(dataArr[6]),
 		powerPhase2: toSigned(dataArr[7]),
 		powerPhase3: toSigned(dataArr[8]),
+		inverterTemperature: dataArr[54],
 	};
 };
 
